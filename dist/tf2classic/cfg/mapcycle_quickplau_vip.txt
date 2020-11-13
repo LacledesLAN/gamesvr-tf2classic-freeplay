@@ -1,0 +1,4 @@
+vip_badwater
+vip_harbor
+vip_mineside
+vip_trainyard
