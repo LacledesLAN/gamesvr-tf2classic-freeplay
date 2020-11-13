@@ -1,5 +1,5 @@
 # escape=`
-FROM lacledeslan/gamesvr-tf2classic-freeplay
+FROM lacledeslan/gamesvr-tf2classic
 
 HEALTHCHECK NONE
 
