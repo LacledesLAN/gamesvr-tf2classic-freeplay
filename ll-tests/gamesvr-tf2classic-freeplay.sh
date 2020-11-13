@@ -151,6 +151,7 @@ should_lack 'Server restart in 10 seconds' 'Server is not boot-looping';
 should_lack 'Running the dedicated server as root' 'Server is not running under root';
 should_have 'server_srv.so loaded for "Team Fortress 2 Classic"' 'srcds_run loaded TF2 Classic';
 should_lack 'Your server needs to be restarted in order to receive the latest update.' 'Server is not reporting itself as out of date';
+should_lack 'AppFramework : Unable to load module' 'no linux shared objects failed to load';
 
 ## Verify server responds to commands
 should_echo "say STARTING COMMAND TESTS" 'Console: STARTING COMMAND TESTS';
