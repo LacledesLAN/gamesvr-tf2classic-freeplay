@@ -15,7 +15,7 @@
         {
             "label": "Build & Execute Self Tests",
             "type": "shell",
-            "command": "docker run -it --rm ll/gamesvr-tf2classic-freeplay ./ll-tests/gamesvr-tf2classic-freeplay.sh;",
+            "command": "docker run -it --rm -p 27015:27015/tcp -p 27015:27015/udp ll/gamesvr-tf2classic-freeplay ./ll-tests/gamesvr-tf2classic-freeplay.sh;",
             "dependsOn": "Build Image",
             "group": {
                 "kind": "build",
@@ -27,7 +27,12 @@
         {
             "label": "Build & Run Interactive Server",
             "type": "shell",
-            "command": "docker run -it --net=host ll/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map ctf_2fort -insecure -norestart +sv_lan 1 +rcon_password \"test123\";",
+            "linux":{
+                "command": "docker run -it --rm -p 27015:27015/tcp -p 27015:27015/udp ll/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map ctf_2fort -insecure -norestart +sv_lan 1 +rcon_password \"test123\";"
+            },
+            "windows":{
+                "command": "$IP=((Get-WmiObject -Class Win32_NetworkAdapterConfiguration | where {$_.DefaultIPGateway -ne $null}).IPAddress | select-object -first 1); docker run -it -p ${IP}:27015:27015/udp -p ${IP}:27015:27015/tcp ll/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map ctf_2fort -insecure -norestart +sv_lan 1 +rcon_password \"test123\";"
+            },
             "dependsOn": "Build Image",
             "group": "build",
             "problemMatcher": [],
@@ -36,7 +41,7 @@
         {
             "label": "Build & Shell In",
             "type": "shell",
-            "command": "docker run -it --net=host --rm ll/gamesvr-tf2classic-freeplay;",
+            "command": "docker run -it --rm -p 27015:27015/tcp -p 27015:27015/udp ll/gamesvr-tf2classic-freeplay;",
             "dependsOn": "Build Image",
             "group": "build",
             "problemMatcher": [],
