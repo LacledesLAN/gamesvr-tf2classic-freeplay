@@ -23,7 +23,7 @@ docker run -it --rm lacledeslan/gamesvr-tf2classic-freeplay ./ll-tests/gamesvr-t
 ### Run Simple, Interactive Server
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map vip_harbor +maxplayers 32 +sv_password lltest
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map vip_harbor +maxplayers 32
 ```
 
 ## Getting Started with Game Servers in Docker
