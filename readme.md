@@ -25,13 +25,13 @@ docker run -it --rm lacledeslan/gamesvr-tf2classic-freeplay ./ll-tests/gamesvr-t
 #### VIP Server
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map vip_harbor +maxplayers 32
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map vip_harbor +maxplayers 32 +mapcycle "mapcycle_quickplay_vip.txt"
 ```
 
 #### Domination Server
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map dom_oilcanyon +maxplayers 32
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map dom_oilcanyon +maxplayers 32 +mapcycle "mapcycle_quickplay_dom.txt"
 ```
 
 #### Base Game Modes
@@ -39,37 +39,43 @@ docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_r
 ##### Arena Server
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map arena_granary +maxplayers 32
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map arena_granary +maxplayers 32 +mapcycle "mapcycle_quickplay_arena.txt"
 ```
 
 ##### Capture The Flag
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map ctf_landfall +maxplayers 32
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map ctf_landfall +maxplayers 32 +mapcycle "mapcycle_quickplay_ctf.txt"
 ```
 
 ##### Control Point Server
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map cp_tidal_v4 +maxplayers 32
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map cp_tidal_v4 +maxplayers 32 +mapcycle "mapcycle_quickplay_cp.txt"
 ```
 
 ##### King of the Hill Server
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map koth_lakeside_final +maxplayers 32
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map koth_lakeside_final +maxplayers 32 +mapcycle "mapcycle_quickplay_koth.txt"
 ```
 
 ##### Payload Server
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map pl_thundermountain +maxplayers 32
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map pl_thundermountain +maxplayers 32 +mapcycle "mapcycle_quickplay_payload.txt"
 ```
 
 ##### Payload Race Server
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map plr_nightfall_final +maxplayers 32
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map plr_nightfall_final +maxplayers 32 +mapcycle "mapcycle_quickplay_payloadrace.txt"
+```
+
+##### All maps Server
+
+```shell
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2classic-freeplay ./srcds_run -game tf2classic +map ctf_2fort +maxplayers 32 +mapcycle "mapcycle_default.txt"
 ```
 
 ## Getting Started with Game Servers in Docker
