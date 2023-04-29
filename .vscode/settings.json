@@ -1,14 +1,37 @@
 {
     "cSpell.words": [
+        "DOCKERHUB",
         "freeplay",
         "gamesvr",
         "koth",
         "laclede",
         "laclede's",
         "lacledeslan",
+        "mapcycle",
         "maxplayers",
+        "oilcanyon",
+        "payloadrace",
+        "quickplay",
         "run",
         "srcds",
-        "srcds run"
-    ]
+        "srcds run",
+        "thundermountain"
+    ],
+    "markdownlint.ignore": [
+        ".gitkeep", "LICENSE"
+    ],
+    "terminal.integrated.scrollback": 2500,
+    "[markdown]": {
+        "cSpell.fixSpellingWithRenameProvider": true,
+        "cSpell.advanced.feature.useReferenceProviderWithRename": true,
+        "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/",
+        "editor.rulers": [120],
+        "editor.unicodeHighlight.ambiguousCharacters": true,
+        "editor.unicodeHighlight.invisibleCharacters": true,
+        "editor.wordWrap": "on"
+    },
+    "[shellscript]": {
+        "editor.rulers": [100],
+        "files.eol": "\n"
+    }
 }
